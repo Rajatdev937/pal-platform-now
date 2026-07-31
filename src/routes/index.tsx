@@ -30,7 +30,7 @@ function Index() {
 
   return (
     <main>
-      <h1 className="sr-only">Happy Friendship Day</h1>
+
       {scene === 0 && <IntroScene onDone={next} />}
       {scene === 1 && <EnvelopeScene onDone={next} />}
       {scene === 2 && <MemoryWallScene onDone={next} />}
