@@ -45,6 +45,8 @@
   --animate-float: float 6s ease-in-out infinite;
   --animate-rise: rise 5s linear infinite;
   --animate-soft-in: soft-in 0.7s ease-out both;
+  --animate-balloon-rise: balloon-rise 2.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-balloon-bob: balloon-bob 6s ease-in-out infinite 2.4s;
 }
 
 :root {
@@ -127,6 +129,29 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes balloon-rise {
+  from {
+    transform: translateY(100vh) scale(0.85);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes balloon-bob {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1);
   }
 }
 
