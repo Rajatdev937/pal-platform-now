@@ -2,16 +2,12 @@ import m1 from "@/assets/memory-1.jpg";
 import m2 from "@/assets/memory-2.jpg";
 import m3 from "@/assets/memory-3.jpg";
 import m4 from "@/assets/memory-4.jpg";
-import m5 from "@/assets/memory-5.jpg";
-import m6 from "@/assets/memory-6.jpg";
 
 export const memories = [
   { src: m1, alt: "Two cartoon friends hugging", note: "day one energy. we had no idea what was coming." },
   { src: m2, alt: "A cat holding a rose", note: "still one of the funniest nights of my life." },
   { src: m3, alt: "A basket of flowers", note: "nothing happened this day. that was the best part." },
   { src: m4, alt: "A drawing of pink tulips", note: "the trip we planned badly and loved anyway." },
-  { src: m5, alt: "A doodle of a happy frog", note: "3am, terrible snacks, best conversation." },
-  { src: m6, alt: "Two friends sharing ice cream", note: "proof we clean up alright when we try." },
 ];
 
 export const truths = [
