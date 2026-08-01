@@ -153,6 +153,22 @@
   }
 }
 
+@keyframes note-out {
+  0% {
+    transform: translateY(58%) scale(0.94);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+
 @utility graph-paper {
   background-color: var(--background);
   background-image:
