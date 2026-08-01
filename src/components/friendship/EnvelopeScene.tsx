@@ -9,13 +9,13 @@ export function EnvelopeScene({ onDone }: { onDone: () => void }) {
         <div className="relative z-20 mx-auto -mb-14 w-[86%] rounded-t-xl bg-paper px-6 pt-8 pb-16 text-center shadow-[0_-8px_24px_-16px_rgba(0,0,0,0.35)]">
           <span className="absolute top-3 left-3 text-honey">♥</span>
           <span className="absolute top-3 right-3 text-honey">♥</span>
-          <p className="font-script text-3xl text-foreground">Hey You!</p>
+          <p className="font-script text-3xl text-foreground">Hey You Baunii!!</p>
           <p className="font-script mt-3 text-xl leading-8 text-muted-foreground">
-            I made a little something
+            I created&nbsp; something&nbsp;for you on this very day hope you like it
             <br />
-            just for you...
+            (as always😏)...
           </p>
-          <p className="font-script mt-3 text-lg text-primary">happy friendship day ✿</p>
+          <p className="font-script mt-3 text-lg text-primary">Divyanshi.... ✿</p>
         </div>
 
         {/* envelope */}
@@ -28,7 +28,7 @@ export function EnvelopeScene({ onDone }: { onDone: () => void }) {
             Happy Friendship Day
           </span>
           <span className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-4xl text-accent drop-shadow-sm">
-            ♥
+            💝
           </span>
           <img
             src={critter}
@@ -42,7 +42,7 @@ export function EnvelopeScene({ onDone }: { onDone: () => void }) {
       </div>
 
       <p className="mt-10 animate-pulse font-sans text-[11px] font-semibold tracking-[0.3em] text-muted-foreground uppercase">
-        Tap anywhere to begin
+        TAP ANYWHERE TO BEGIN!!
       </p>
     </SceneShell>
   );
