@@ -5,6 +5,8 @@ import { EnvelopeScene } from "@/components/friendship/EnvelopeScene";
 import { MemoryWallScene } from "@/components/friendship/MemoryWallScene";
 import { TruthsScene } from "@/components/friendship/TruthsScene";
 import { LetterScene } from "@/components/friendship/LetterScene";
+import { QuestionScene } from "@/components/friendship/QuestionScene";
+import { BandScene } from "@/components/friendship/BandScene";
 
 const title = "Happy Friendship Day — A Little Something For You";
 const description =
@@ -35,7 +37,9 @@ function Index() {
       {scene === 1 && <EnvelopeScene onDone={next} />}
       {scene === 2 && <MemoryWallScene onDone={next} />}
       {scene === 3 && <TruthsScene onDone={next} />}
-      {scene === 4 && <LetterScene onReplay={() => setScene(0)} />}
+      {scene === 4 && <LetterScene onReplay={() => setScene(0)} onNext={next} />}
+      {scene === 5 && <QuestionScene onDone={next} />}
+      {scene === 6 && <BandScene onDone={() => setScene(0)} />}
     </main>
   );
 }

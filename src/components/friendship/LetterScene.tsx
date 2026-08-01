@@ -2,7 +2,7 @@ import critter from "@/assets/critter.png";
 import { memories } from "./content";
 import { SceneShell } from "./SceneShell";
 
-export function LetterScene({ onReplay }: { onReplay: () => void }) {
+export function LetterScene({ onReplay, onNext }: { onReplay: () => void; onNext?: () => void }) {
   return (
     <SceneShell>
       <div className="animate-soft-in flex w-full max-w-xl flex-col items-center">
@@ -66,13 +66,24 @@ export function LetterScene({ onReplay }: { onReplay: () => void }) {
         <p className="mt-7 font-sans text-[11px] font-semibold tracking-[0.25em] text-primary uppercase">
           ✿ made with love by me
         </p>
-        <button
-          type="button"
-          onClick={onReplay}
-          className="mt-4 rounded-full border border-primary/40 bg-card px-6 py-2 font-sans text-sm font-medium text-primary transition-colors hover:bg-secondary"
-        >
-          ↻ play it again
-        </button>
+        <div className="mt-4 flex flex-wrap justify-center gap-3">
+          <button
+            type="button"
+            onClick={onReplay}
+            className="rounded-full border border-primary/40 bg-card px-6 py-2 font-sans text-sm font-medium text-primary transition-colors hover:bg-secondary"
+          >
+            ↻ play it again
+          </button>
+          {onNext && (
+            <button
+              type="button"
+              onClick={onNext}
+              className="rounded-full bg-primary px-6 py-2 font-sans text-sm font-semibold text-primary-foreground shadow-[0_10px_24px_-12px_var(--primary)] transition-transform hover:scale-105 active:scale-95"
+            >
+              one more thing →
+            </button>
+          )}
+        </div>
       </div>
     </SceneShell>
   );
