@@ -18,29 +18,58 @@ export function EnvelopeScene({ onDone }: { onDone: () => void }) {
           <p className="font-script mt-3 text-lg text-primary">Divyanshi.... ✿</p>
         </div>
 
-        {/* envelope */}
-        <div className="animate-soft-in relative z-30 aspect-[16/9.5] w-full overflow-hidden rounded-xl border-2 border-primary/80 bg-mint shadow-[0_18px_40px_-24px_rgba(0,0,0,0.45)]">
-          {/* diagonal folds forming an X */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-0 h-full w-1/2 origin-top-left skew-y-[31deg] border-r border-primary/40 bg-[color-mix(in_oklab,var(--mint)_88%,white)]" />
-            <div className="absolute top-0 right-0 h-full w-1/2 origin-top-right -skew-y-[31deg] border-l border-primary/40 bg-[color-mix(in_oklab,var(--mint)_88%,white)]" />
-            <div className="absolute bottom-0 left-0 h-full w-1/2 origin-bottom-left -skew-y-[31deg] border-r border-primary/40 bg-[color-mix(in_oklab,var(--mint)_70%,white)]" />
-            <div className="absolute right-0 bottom-0 h-full w-1/2 origin-bottom-right skew-y-[31deg] border-l border-primary/40 bg-[color-mix(in_oklab,var(--mint)_70%,white)]" />
-          </div>
+        {/* Envelope */}
+        <div className="animate-soft-in relative z-30 mx-auto h-[240px] w-full max-w-md">
+          {/* Back body */}
+          <div className="absolute inset-0 rounded-[10px] border-2 border-[#4d6f67] bg-[#b9e6d8] shadow-xl" />
 
-          <span className="absolute top-1/2 left-5 z-10 -translate-y-1/2 rounded-md border-2 border-dashed border-primary/70 bg-paper/40 px-3 py-1 font-sans text-[10px] font-bold tracking-widest text-primary uppercase">
+          {/* Left Fold */}
+          <div
+            className="absolute bottom-0 left-0 h-[72%] w-1/2 border-r border-[#6b9087] bg-[#cfeee5]"
+            style={{
+              clipPath: "polygon(0 100%,100% 0,100% 100%)",
+            }}
+          />
+
+          {/* Right Fold */}
+          <div
+            className="absolute right-0 bottom-0 h-[72%] w-1/2 border-l border-[#6b9087] bg-[#cfeee5]"
+            style={{
+              clipPath: "polygon(0 0,100% 100%,0 100%)",
+            }}
+          />
+
+          {/* Bottom Fold */}
+          <div
+            className="absolute bottom-0 left-0 h-[65%] w-full border-t border-[#6b9087] bg-[#a9dccc]"
+            style={{
+              clipPath: "polygon(0 100%,50% 28%,100% 100%)",
+            }}
+          />
+
+          {/* Top Open Flap */}
+          <div
+            className="absolute top-0 left-0 h-[55%] w-full origin-top bg-[#d7f3eb]"
+            style={{
+              clipPath: "polygon(0 0,100% 0,50% 100%)",
+            }}
+          />
+
+          {/* Tag */}
+          <span className="absolute left-5 top-[55%] z-30 rounded-full border-2 border-dashed border-primary bg-paper px-4 py-2 text-xs font-bold uppercase tracking-wider text-primary">
             Happy Friendship Day
           </span>
-          <span className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 text-4xl text-accent drop-shadow-sm">
-            💝
-          </span>
+
+          {/* Heart Seal */}
+          <div className="absolute bottom-9 left-1/2 z-30 -translate-x-1/2 text-5xl">
+            💛
+          </div>
+
+          {/* Otter */}
           <img
             src={critter}
-            alt="A tiny otter peeking from behind the envelope"
-            width={512}
-            height={512}
-            loading="lazy"
-            className="absolute right-1 bottom-0 z-10 w-14 sm:w-16"
+            alt=""
+            className="absolute right-1 bottom-1 z-40 w-16"
           />
         </div>
       </div>
