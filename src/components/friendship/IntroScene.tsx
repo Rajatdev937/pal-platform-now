@@ -4,7 +4,8 @@ import { SceneShell } from "./SceneShell";
 
 export function IntroScene({ onDone }: { onDone: () => void }) {
   useEffect(() => {
-    const t = setTimeout(onDone, 4200);
+    // Increase delay slightly to allow for the rise + float animation
+    const t = setTimeout(onDone, 5000);
     return () => clearTimeout(t);
   }, [onDone]);
 
@@ -20,7 +21,7 @@ export function IntroScene({ onDone }: { onDone: () => void }) {
           alt="A striped hot air balloon carrying a letter"
           width={512}
           height={640}
-          className="animate-balloon-rise animate-balloon-bob w-40 drop-shadow-[0_18px_28px_rgba(0,0,0,0.08)] sm:w-52 motion-reduce:animate-soft-in"
+          className="animate-balloon-rise-float w-40 drop-shadow-[0_18px_28px_rgba(0,0,0,0.08)] sm:w-52 motion-reduce:animate-soft-in"
         />
         {[0, 1, 2, 3].map((i) => (
           <span
