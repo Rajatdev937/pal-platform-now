@@ -9,7 +9,7 @@ export function MemoryWallScene({ onDone }: { onDone: () => void }) {
   return (
     <SceneShell>
       <SceneHeading
-        eyebrow="The Memory Wall"
+        eyebrow="OUR MEMORIES"
         title="flip one over"
         subtitle="every photo has something written on the back"
       />
