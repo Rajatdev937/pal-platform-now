@@ -46,6 +46,7 @@
   --animate-rise: rise 5s linear infinite;
   --animate-soft-in: soft-in 0.7s ease-out both;
   --animate-balloon-rise-float: balloon-rise-float 4.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-note-out: note-out 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
 }
 
 :root {
